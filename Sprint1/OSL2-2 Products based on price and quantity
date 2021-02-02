@@ -1,0 +1,3 @@
+alter session set current_schema = shopping;
+SET heading OFF;
+SELECT * FROM PRODUCTS WHERE PRICE > 10000 AND QUANTITY = 20;
