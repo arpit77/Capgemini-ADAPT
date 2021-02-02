@@ -1,0 +1,3 @@
+alter session set current_schema = shopping;
+SET heading OFF;
+SELECT CITY, COUNT(*) FROM CUSTOMERS GROUP BY CITY; 
