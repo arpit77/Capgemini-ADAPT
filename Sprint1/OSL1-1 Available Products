@@ -1,0 +1,3 @@
+alter session set current_schema = shopping;
+SET eading OFF;
+SELECT * PRODUCTS;
