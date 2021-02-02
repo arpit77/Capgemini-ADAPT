@@ -1,0 +1,3 @@
+alter session set current_schema = shopping;
+SET heading OFF;
+SELECT * FROM CUSTOMERS ORDER BY FIRST_NAME;
