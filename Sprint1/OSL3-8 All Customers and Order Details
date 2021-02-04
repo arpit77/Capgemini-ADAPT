@@ -1,0 +1,4 @@
+alter session set current_schema = shopping;
+SET heading OFF;
+ SELECT * FROM CUSTOMERS LEFT JOIN ORDERS ON 
+ CUSTOMERS.CUSTOMER_ID = ORDERS.CUSTOMER_ID;
