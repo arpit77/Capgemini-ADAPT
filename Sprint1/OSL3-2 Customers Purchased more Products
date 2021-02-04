@@ -1,0 +1,6 @@
+alter session set current_schema = shopping;
+SET heading OFF;
+select * from CUSTOMERS c where CUSTOMER_ID in 
+(select c.CUSTOMER_ID from CUSTOMERS c inner join ORDERS 
+o on c.CUSTOMER_ID=o.CUSTOMER_ID inner join ORDER_ITEMS oi on 
+o.ORDER_ID=oi.ORDER_ID group by c.CUSTOMER_ID having count(PRODUCT_ID)>3);
