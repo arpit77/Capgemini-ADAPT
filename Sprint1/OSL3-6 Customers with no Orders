@@ -1,0 +1,4 @@
+alter session set current_schema = shopping;
+SET heading OFF;
+SELECT * FROM CUSTOMERS WHERE CUSTOMERS.CUSTOMER_ID NOT IN (SELECT CUSTOMER_ID
+FROM ORDERS);
