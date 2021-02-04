@@ -1,0 +1,5 @@
+alter session set current_schema = shopping;
+SET heading OFF;
+select to_char(order_date,'MON-YY'),count(*) from orders group by 
+ to_char(order_date,'MON-YY') having count(*)=(select max(count(*)) 
+ from orders group by to_char(order_date,'MON-YY'));
