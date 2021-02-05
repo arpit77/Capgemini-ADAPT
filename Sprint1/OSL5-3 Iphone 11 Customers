@@ -1,0 +1,8 @@
+ alter session set current_schema = shopping;
+ SET heading OFF;
+ select first_name,order_date from customers c, 
+ (select customer_id,order_date from orders 
+ where order_id in (select order_id from order_items 
+ where product_id in (select product_id from products 
+ where trim(product_name)='New Apple iPhone 11'))) a 
+ where a.customer_id=c.customer_id ORDER BY c.first_name;
