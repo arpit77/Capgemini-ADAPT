@@ -1,0 +1,7 @@
+alter session set current_schema = shopping;
+SET heading OFF;
+SELECT first_name,x.top_customers FROM customers, 
+(SELECT customer_id, top_customers FROM(SELECT customer_id, 
+COUNT(*) top_customers FROM orders GROUP BY customer_id 
+ORDER BY top_customers DESC) where rownum<=3)x 
+WHERE customers.customer_id=x.customer_id;
