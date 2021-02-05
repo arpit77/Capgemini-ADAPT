@@ -1,0 +1,5 @@
+alter session set current_schema = shopping;
+SET heading OFF;
+ select * from products where category = 
+ (select category from products where 
+ trim(product_name)='Philips Hi-Res');
