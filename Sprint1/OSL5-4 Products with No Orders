@@ -1,0 +1,4 @@
+alter session set current_schema = shopping;
+SET heading OFF;
+select products.* from products left outer join order_items o on
+ products.product_id=o.product_id where o.order_id is null;
