@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+  <head>
+    <title>Buy Online</title>
+  </head>
+
+  <body>
+      <script language="Javascript">
+          function totalCost(){
+              var name=document.getElementById("name").value;
+              cost=100;
+              var quantity=parseInt(document.getElementById("quantity").value);
+              tcost= cost*quantity;
+              val=confirm("Number of Products:" tcost);
+              if(val=true){
+                  alert("Thank you for order Mr/Ms/Mrs:"+name);
+              }
+          }
+          function numProducts(){
+              var productNum=document.getElementById("quantity").value;
+              if(productNum>5){
+                  alert("We cannot book over 5 products SORRY!!!")
+                  return false;
+              }
+          }
+          function availProducts(){
+              maxProducts=32;
+              var productnum=document.getElementById("quantity").value
+              if(productnum.value<=(maxProducts)){
+                  return true;
+              }
+              else{
+                  alert("Not Allowed");
+                  return false
+              }
+          }
+          
+      </script>
+      <h2>
+          <span style="background-color:#000080; color:#ff6600;">Buy Product</span>
+      </h2>
+      <table>
+          <tr>
+              <td>Product Id</td>
+              <td><select>
+                  <option>P002</option>
+                  <option>P002</option>
+                  <option>P002</option>
+                  <option>P002</option>
+                  <option>P002</option>
+                  <option>P002</option>
+                  <option>P002</option>
+                  <option>P002</option>
+                  <option>P002</option>
+                  <option>P002</option>
+              </select></td>
+          </tr>
+          <tr>
+              <td> Customer Name</td>
+              <td><input type="text" id="name"></td>
+          </tr>
+          <tr>
+              <td>Address</td>
+              <td><input type="text"></td>
+          </tr>
+          <tr>
+              <td>Number of Products Available</td>
+              <td><input type="text" id="maxProducts"></td>
+          </tr>
+          <tr>
+              <td>Number of Products</td>
+              <td><input type="number" id="quantity" onblur="numProducts()"></td>
+          </tr>
+          <tr>
+              <td>Product Cost</td>
+              <td><input type="text" id="cost"></td>
+          </tr>
+          <tr>
+              <td>Total Amount</td>
+              <td><input type="text" id="tcost" onblur="totalCost()"></td>
+          </tr>
+          <tr>
+              <td><input type="button" onclick="totalCost()" value="Submit"></td>
+          </tr>
+      </table>
+   
+  </body>
+</html>
