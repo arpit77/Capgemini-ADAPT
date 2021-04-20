@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+	public static void main(String args[] ) throws Exception {
+		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+		Scanner sc = new Scanner(System.in);
+		String[] books = new String[5];
+		for(int i = 0; i < 5; i++){
+		    books[i] = sc.nextLine();
+		}
+		Arrays.sort(books);
+		for(int i = 0; i < 5; i++){
+		    System.out.println(books[i]);
+		}
+	}
+}
