@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+	public static void main(String args[] ) throws Exception {
+		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+		Scanner sc = new Scanner(System.in);
+		String[][] books = new String[5][3];
+		for(int i = 0; i < 5; i++){
+		    for(int j = 0; j < 3; j++){
+		        books[i][j] = sc.nextLine();
+		    }
+		}
+		Arrays.sort(books, new Comparator<String[]>() {
+            @Override
+            public int compare(final String[] entry1, final String[] entry2) {
+                final String id1 = entry1[0];
+                final String id2 = entry2[0];
+                return id1.compareTo(id2);
+            }
+        });
+		for(int i = 0; i < 5; i++){
+		    for(int j = 0; j < 3; j++){
+		        System.out.println(books[i][j]);
+		    }
+		}
+	}
+}
