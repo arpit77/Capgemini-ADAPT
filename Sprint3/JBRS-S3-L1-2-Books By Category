@@ -1,0 +1,34 @@
+
+public class Source {
+  static String[] academics= {"Head First Java","Reinforcement Learning","The Road to React"};
+	static String[] biography= {"My Experiment with Truth","Wings of Fire","The Audacity of Hope","Total Recall"};
+	static String[] general= {"Think And Grow Rich","Awaken The Giant Within","Peace is Power"};
+	
+
+	public static void main(String args[] ) throws Exception {
+		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+		String choice;
+		Scanner sc = new Scanner(System.in);
+		choice = sc.nextLine();
+		choice = choice.toLowerCase();
+		switch(choice){
+		    case "academics":
+		        for(int i = 0; i < academics.length; i++){
+		            System.out.println(academics[i]);
+		        }
+		        break;
+		    case "biography":
+		            for(int i = 0; i < biography.length; i++){
+		            System.out.println(biography[i]);
+		        }
+		        break;
+		    case "general":
+		        for(int i = 0; i < general.length; i++){
+		            System.out.println(general[i]);
+		        }
+		        break;
+		    default:
+		        System.out.println("No Books Available");
+		}
+	}
+}
